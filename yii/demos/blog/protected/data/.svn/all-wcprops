@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/appid2b1qdred6z/!svn/ver/3/yii/demos/blog/protected/data
+END
+schema.mysql.sql
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/appid2b1qdred6z/!svn/ver/3/yii/demos/blog/protected/data/schema.mysql.sql
+END
+blog-test.db
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/appid2b1qdred6z/!svn/ver/3/yii/demos/blog/protected/data/blog-test.db
+END
+dbgen.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/appid2b1qdred6z/!svn/ver/3/yii/demos/blog/protected/data/dbgen.php
+END
+blog.db
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/appid2b1qdred6z/!svn/ver/3/yii/demos/blog/protected/data/blog.db
+END
+schema.sqlite.sql
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/appid2b1qdred6z/!svn/ver/3/yii/demos/blog/protected/data/schema.sqlite.sql
+END

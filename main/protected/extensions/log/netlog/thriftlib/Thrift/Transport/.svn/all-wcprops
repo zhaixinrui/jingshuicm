@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/appid2b1qdred6z/!svn/ver/3/main/protected/extensions/log/netlog/thriftlib/Thrift/Transport
+END
+TNullTransport.php
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/appid2b1qdred6z/!svn/ver/3/main/protected/extensions/log/netlog/thriftlib/Thrift/Transport/TNullTransport.php
+END
+TSocket.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/appid2b1qdred6z/!svn/ver/3/main/protected/extensions/log/netlog/thriftlib/Thrift/Transport/TSocket.php
+END
+TFramedTransport.php
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/appid2b1qdred6z/!svn/ver/3/main/protected/extensions/log/netlog/thriftlib/Thrift/Transport/TFramedTransport.php
+END
+TTransport.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/appid2b1qdred6z/!svn/ver/3/main/protected/extensions/log/netlog/thriftlib/Thrift/Transport/TTransport.php
+END
+THttpClient.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/appid2b1qdred6z/!svn/ver/3/main/protected/extensions/log/netlog/thriftlib/Thrift/Transport/THttpClient.php
+END
+TBufferedTransport.php
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/appid2b1qdred6z/!svn/ver/3/main/protected/extensions/log/netlog/thriftlib/Thrift/Transport/TBufferedTransport.php
+END
+TMemoryBuffer.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/appid2b1qdred6z/!svn/ver/3/main/protected/extensions/log/netlog/thriftlib/Thrift/Transport/TMemoryBuffer.php
+END
+TSocketPool.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/appid2b1qdred6z/!svn/ver/3/main/protected/extensions/log/netlog/thriftlib/Thrift/Transport/TSocketPool.php
+END
+TPhpStream.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/appid2b1qdred6z/!svn/ver/3/main/protected/extensions/log/netlog/thriftlib/Thrift/Transport/TPhpStream.php
+END

@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/appid2b1qdred6z/!svn/ver/81/main/protected/tests/unit
+END
+CommentTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/appid2b1qdred6z/!svn/ver/73/main/protected/tests/unit/CommentTest.php
+END
+ApplyTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/appid2b1qdred6z/!svn/ver/81/main/protected/tests/unit/ApplyTest.php
+END
+OrderGoodsTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/appid2b1qdred6z/!svn/ver/67/main/protected/tests/unit/OrderGoodsTest.php
+END
+RankListTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/appid2b1qdred6z/!svn/ver/78/main/protected/tests/unit/RankListTest.php
+END
+GoodsTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/appid2b1qdred6z/!svn/ver/41/main/protected/tests/unit/GoodsTest.php
+END
+PictureTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/appid2b1qdred6z/!svn/ver/53/main/protected/tests/unit/PictureTest.php
+END
+ActivityTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/appid2b1qdred6z/!svn/ver/37/main/protected/tests/unit/ActivityTest.php
+END
+JoinActivityTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/appid2b1qdred6z/!svn/ver/67/main/protected/tests/unit/JoinActivityTest.php
+END
+UserTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/appid2b1qdred6z/!svn/ver/3/main/protected/tests/unit/UserTest.php
+END
+FavoriteTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/appid2b1qdred6z/!svn/ver/81/main/protected/tests/unit/FavoriteTest.php
+END
+MerchantTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/appid2b1qdred6z/!svn/ver/36/main/protected/tests/unit/MerchantTest.php
+END

@@ -1,0 +1,32 @@
+2014/03/06 22:26:51 [error] [exception.CException] exception 'CException' with message 'CHttpRequest is unable to determine the request URI.' in /root/project02/yii/framework/web/CHttpRequest.php:506
+Stack trace:
+#0 /root/project02/yii/framework/web/CHttpRequest.php(418): CHttpRequest->getRequestUri()
+#1 /root/project02/yii/framework/web/CUrlManager.php(361): CHttpRequest->getPathInfo()
+#2 /root/project02/yii/framework/web/CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#3 /root/project02/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /root/project02/yii/demos/blog/index-test.php(15): CApplication->run()
+#5 {main}
+---
+2014/03/08 20:54:04 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'blog.tbl_post' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_post`.
+2014/03/08 20:54:04 [error] [exception.CDbException] exception 'CDbException' with message 'The table "{{post}}" for active record class "Post" cannot be found in the database.' in /root/project02/yii/framework/db/ar/CActiveRecord.php:2310
+Stack trace:
+#0 /root/project02/yii/framework/db/ar/CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Post))
+#1 /root/project02/yii/framework/web/CActiveDataProvider.php(74): CActiveRecord::model('Post')
+#2 /root/project02/yii/demos/blog/protected/controllers/PostController.php(132): CActiveDataProvider->__construct('Post', Array)
+#3 /root/project02/yii/framework/web/actions/CInlineAction.php(49): PostController->actionIndex()
+#4 /root/project02/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /root/project02/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /root/project02/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /root/project02/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /root/project02/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /root/project02/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /root/project02/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /root/project02/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /root/project02/yii/framework/web/CWebApplication.php(282): CController->run('')
+#13 /root/project02/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#14 /root/project02/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /root/project02/yii/demos/blog/index.php(11): CApplication->run()
+#16 {main}
+REQUEST_URI=/
+HTTP_REFERER=http://project02.duapp.com:10080/demo/index.php
+---

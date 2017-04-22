@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/appid2b1qdred6z/!svn/ver/242/main/protected/models
+END
+Merchant.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/appid2b1qdred6z/!svn/ver/36/main/protected/models/Merchant.php
+END
+Comment.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/appid2b1qdred6z/!svn/ver/131/main/protected/models/Comment.php
+END
+OrderGoods.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/appid2b1qdred6z/!svn/ver/67/main/protected/models/OrderGoods.php
+END
+HotActivity.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/appid2b1qdred6z/!svn/ver/242/main/protected/models/HotActivity.php
+END
+User.php.bak
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/appid2b1qdred6z/!svn/ver/67/main/protected/models/User.php.bak
+END
+Goods.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/appid2b1qdred6z/!svn/ver/67/main/protected/models/Goods.php
+END
+Picture.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/appid2b1qdred6z/!svn/ver/53/main/protected/models/Picture.php
+END
+create.sql
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/appid2b1qdred6z/!svn/ver/3/main/protected/models/create.sql
+END
+JoinActivity.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/appid2b1qdred6z/!svn/ver/67/main/protected/models/JoinActivity.php
+END
+User.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/appid2b1qdred6z/!svn/ver/67/main/protected/models/User.php
+END
+ContactForm.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/appid2b1qdred6z/!svn/ver/3/main/protected/models/ContactForm.php
+END
+Favorite.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/appid2b1qdred6z/!svn/ver/81/main/protected/models/Favorite.php
+END
+Apply.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/appid2b1qdred6z/!svn/ver/81/main/protected/models/Apply.php
+END
+RankList.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/appid2b1qdred6z/!svn/ver/130/main/protected/models/RankList.php
+END
+Activity.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/appid2b1qdred6z/!svn/ver/81/main/protected/models/Activity.php
+END
+LoginForm.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/appid2b1qdred6z/!svn/ver/3/main/protected/models/LoginForm.php
+END

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/appid2b1qdred6z/!svn/ver/3/yii/framework/db/schema/pgsql
+END
+CPgsqlColumnSchema.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/appid2b1qdred6z/!svn/ver/3/yii/framework/db/schema/pgsql/CPgsqlColumnSchema.php
+END
+CPgsqlSchema.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/appid2b1qdred6z/!svn/ver/3/yii/framework/db/schema/pgsql/CPgsqlSchema.php
+END
+CPgsqlTableSchema.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/appid2b1qdred6z/!svn/ver/3/yii/framework/db/schema/pgsql/CPgsqlTableSchema.php
+END

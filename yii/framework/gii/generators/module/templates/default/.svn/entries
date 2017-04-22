@@ -1,0 +1,77 @@
+10
+
+dir
+247
+https://svn.duapp.com/appid2b1qdred6z/yii/framework/gii/generators/module/templates/default
+https://svn.duapp.com/appid2b1qdred6z
+
+
+
+2014-03-17T15:41:55.771980Z
+3
+翟鑫瑞
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1a0beb16-39a9-491a-8432-0dfbb1476d54
+
+models
+dir
+
+components
+dir
+
+controllers
+dir
+
+messages
+dir
+
+module.php
+file
+
+
+
+
+2014-04-27T13:30:40.272172Z
+bc12cddc675b1908d484eba5838e4941
+2014-03-17T15:41:55.771980Z
+3
+翟鑫瑞
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+725
+
+views
+dir
+

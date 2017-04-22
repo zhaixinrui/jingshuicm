@@ -1,0 +1,261 @@
+<?php
+
+class MerchantController extends Controller
+{
+    private $merchantModel;
+
+    public function initUserInfo() {
+        if ('Guest' === Yii::app()->user->name) {
+            // 游客需要登录
+            $this->redirect(Yii::app()->user->loginUrl);
+        } else {
+            $this->userModel = User::model()->find("username=:name", 
+                array(':name' => Yii::app()->user->name));
+            if (UserIdentity::USER_ROLE_NORMAL === intval($this->userModel->role)) {
+                // 用户角色非商家和管理员的跳转到登录
+                $this->redirect(Yii::app()->user->loginUrl);
+            } else {
+                if (UserIdentity::USER_ROLE_MERCHANT === intval($this->userModel->role)) {
+                    $this->merchantModel = Merchant::model()->find("userId=:id",
+                        array(':id' => $this->userModel->id));
+                } else {
+                    $this->merchantModel = null;
+                }
+            }
+        }
+    }
+    
+    // 商家设置店铺信息
+    public function actionSetting()
+    {
+        $this->title = '易人宜家 - 店铺管理';
+        if('Guest' === Yii::app()->user->name){
+            // 游客需要登录
+            $this->redirect(Yii::app()->user->loginUrl);
+        }else{
+            $this->userModel = User::model()->find("username=:name", array(':name' => Yii::app()->user->name)); 
+            if(UserIdentity::USER_ROLE_MERCHANT !== intval($this->userModel->role)){
+                // 用户角色非商家的跳转到登录
+                $this->redirect(Yii::app()->user->loginUrl);
+            }
+        }        
+        if(isset($_POST['name'])){
+            $this->updateSetting();
+        }else{
+            $this->checkSetting();
+        }
+    }
+
+    // 查看店铺信息
+    private function checkSetting(){
+        if('Guest' === Yii::app()->user->name){
+            $this->redirect(Yii::app()->user->loginUrl);
+        }else{
+            $userModel = User::model()->find("username=:name", array(':name' => Yii::app()->user->name));
+            $merchantModel = Merchant::model()->find("userId=:id", array(':id' => $userModel->id));
+            $this->smarty->assign('title', '易人宜家 - 店铺管理');
+            $this->smarty->assign('username', Yii::app()->user->name);
+            $this->smarty->assign('userRole', $userModel->role);
+            $this->smarty->assign('pageTpl', 'merchant_setting.tpl');
+            // 是否已经创建店铺
+            $merchantModel = Merchant::model()->find("userId=:id", array(':id' => $userModel->id));
+            if(empty($merchantModel)){
+                $this->smarty->assign('id', null);
+                $this->smarty->assign('name', "");
+                $this->smarty->assign('category', 0);
+                $this->smarty->assign('phone', "");
+                $this->smarty->assign('address', "");
+                $this->smarty->assign('coordinate', "");
+                $this->smarty->assign('introduction', "");
+                $this->smarty->assign('logo', "");
+                $this->smarty->assign('merchantLevel', $merchantModel.level);
+            }else{
+                $this->smarty->assign('id', $merchantModel->id);
+                $this->smarty->assign('name', $merchantModel->name);
+                $this->smarty->assign('category', $merchantModel->category);
+                $this->smarty->assign('phone', $merchantModel->phone);
+                $this->smarty->assign('address', $merchantModel->address);
+                $this->smarty->assign('coordinate', $merchantModel->coordinate);
+                $this->smarty->assign('introduction', $merchantModel->introduction);
+                $this->smarty->assign('logo', $this->getPicUrlByName($merchantModel->logo));
+                $this->smarty->assign('merchantLevel', $merchantModel->level);
+            }
+            $this->smarty->display('index.tpl');
+        } 
+    }
+
+    // 修改店铺信息
+    private function updateSetting(){
+        if('Guest' === Yii::app()->user->name){
+            $this->redirect(Yii::app()->user->loginUrl);
+        }else{
+            $userModel = User::model()->find("username=:name", array(':name' => Yii::app()->user->name));
+            $merchantModel = Merchant::model()->find("userId=:id", array(':id' => $userModel->id));
+            if(empty($merchantModel)){
+                $merchantModel = new Merchant;
+                $merchantModel->userId = $userModel->id;
+            }
+            $merchantModel->attributes=$_POST;
+            if($merchantModel->save()){
+                $ret = $this->syncLbs($merchantModel);
+                echo json_encode(array('errno' => 0, 'msg' => 'success', 'data' => $ret));
+            }else{
+                echo json_encode(array('errno' => 2, 'msg' => $merchantModel->errors, 'data' => null));
+            }
+        }
+    }
+
+    public function actionUploadPicture() {
+        $this->initUserInfo();
+        if (empty($this->merchantModel)
+            || $this->merchantModel->level != 2) {
+            echo json_encode(array('errno' => 1, 'msg' => 'you have no right'));
+            //$this->smarty->showErrPage($this->title, '您没有权限上传！', $this->userModel->role);
+        }
+        if (!isset($_FILES['merchantLogo']['tmp_name']) 
+            || '' === $_FILES['merchantLogo']['tmp_name']) {
+            echo json_encode(array('errno' => 2, 'msg' => 'upload failed'));
+                //$this->smarty->showErrPage($this->title, '图片上传失败，请重试！', $this->userModel->role);
+        }
+        $srcFile = $_FILES['merchantLogo']['tmp_name'];
+        $destFile  = Yii::app()->bcs->uploadFile($srcFile);
+        if ($destFile) {
+            $this->merchantModel->logo = $destFile;
+            $this->merchantModel->save();
+            $this->syncLbs($this->merchantModel);
+            echo json_encode(array(
+                'errno' => 0, 
+                'msg' => 'success', 
+                'url' => $destFile,
+                ));
+        } else {
+            echo json_encode(array('errno' => 2, 'msg' => 'upload failed'));
+                    //$this->smarty->showErrPage($this->title, '图片上传失败，请重试！', $this->userModel->role);
+        }
+}
+
+    // 同步店家的信息到lbs
+    private function syncLbs($merchantModel){
+        $mylbs = new MyLbs();
+        $coordinate = explode(',', $merchantModel->coordinate);
+        $logo = '';
+        if (1 == $merchantModel->level){
+            $logo = Yii::app()->request->hostInfo.Yii::app()->homeUrl.'?r=image/view&sign=defaultlogo.png';
+        }else if ( 2 == $merchantModel->level){
+            $logo = Yii::app()->request->hostInfo.Yii::app()->homeUrl.'?r=image/view&sign='.$merchantModel->logo;
+        }
+        $lbsConf = array(
+            'title' => $merchantModel->name,
+            'address' => $merchantModel->address,
+            'longitude' => floatval($coordinate[0]),
+            'latitude' => floatval($coordinate[1]),
+            'category' => $merchantModel->category,
+            'merchantId' => $merchantModel->id,
+            'level'      => $merchantModel->level,
+            'logo'       => $logo,
+            'promotionExpenses' => $merchantModel->promotionExpenses,
+            'coord_type' => 3,
+            );
+            // 在百度地图新建标注
+        $ret = $mylbs->addMerchant($lbsConf);
+        if(3002 === $ret['errno']){
+                // 标注已经存在，修改之
+            return $mylbs->updateMerchant($merchantModel->id, $lbsConf);            
+        }else{
+            return $ret;
+        }
+    }
+
+    /**
+     * 获取商家详情
+     */    
+    public function actionDetail()
+    {
+        if(isset($_GET['merchantId']))
+        {
+            $merchantModel = Merchant::model()->find("id=:id", array(':id' => intval($_GET['merchantId'])));
+            if(empty($merchantModel)){
+                echo json_encode(array('errno' => 1, 'msg' => "merchant does not exsit", 'data' => null));                    
+            }else{
+                $merchant = array(
+                    'name'         => $merchantModel->name,
+                    'category'     => $merchantModel->category,
+                    'phone'        => $merchantModel->phone,
+                    'address'      => $merchantModel->address,
+                    'coordinate'   => $merchantModel->coordinate,
+                    'introduction' => $merchantModel->introduction,
+                    'activities'   => array(),
+                    'goods'        => array(),
+                    );
+                foreach ($merchantModel->activities as $activityModel) {
+                    $activity = $activityModel->attributes;
+                    $activity['picUrls'] = $this->getPicUrls('Activity', $activityModel->id);
+                    $merchant['activities'][] = $activity;
+                }                
+                foreach ($merchantModel->goods as $goodsModel) {
+                    $goods = $goodsModel->attributes;
+                    $goods['picUrls'] = $this->getPicUrls('Goods', $goodsModel->id);
+                    $merchant['goods'][] = $goods;
+                }
+                echo json_encode(array('errno' => 0, 'msg' => "success", 'data' => $merchant)); 
+            }
+        }else{
+            echo json_encode(array('errno' => 2, 'msg' => "parameter error: merchantId cannot be null", 'data' => null)); 
+        }
+    }
+
+    // 同步所有商家信息到lbs
+    public function actionSyncLbs()
+    {
+        $merchantModels = Merchant::model()->findAll();
+        $arrRet = array();
+        foreach ($merchantModels as $merchantModel) {
+            $arrRet[$merchantModel->id] = $this->syncLbs($merchantModel);
+            usleep(100000);
+        }
+        echo json_encode($arrRet);
+    }    
+
+    // 删除lbs中所有商家的标注
+    public function actionDeleteLbs()
+    {
+        $merchantModels = Merchant::model()->findAll();
+        $arrRet = array();
+        $mylbs = new MyLbs();
+        foreach ($merchantModels as $merchantModel) {
+            $arrRet[$merchantModel->id] = $mylbs->deleleMerchant($merchantModel->id);
+            usleep(100000);
+        }
+        echo json_encode($arrRet);
+    }
+    
+    //管理员商家管理,展示商家列表
+    public function actionManage() {
+        // 校验权限
+        $this->initUserInfo();
+        if (null !== $this->merchantModel) {
+            //商家不能查看
+            print_r("您无权限查看此内容");
+            return "FUCK U";
+        }
+
+        $merchants = array();
+        $merchantsObj = Merchant::model()->findAll();
+        if (!empty($merchantsObj)) {
+            foreach ($merchantsObj as $merchantObj) {
+                $merchant = $merchantObj->attributes;
+                $user = User::model()->find('id=:userId',
+                    array(':userId'=> $merchant['userId']));
+                $merchant['username'] = $user['username'];
+                $merchants[] = $merchant;
+            }
+        }
+
+        $this->smarty->assign('title',    $this->title);
+        $this->smarty->assign('username', Yii::app()->user->name);
+        $this->smarty->assign('userRole', $this->userModel->role);
+        $this->smarty->assign('merchants',$merchants);
+        $this->smarty->assign('pageTpl',  'merchant_manage_admin.tpl');
+        $this->smarty->display('index.tpl');
+    }    
+}

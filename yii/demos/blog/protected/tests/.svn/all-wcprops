@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/appid2b1qdred6z/!svn/ver/3/yii/demos/blog/protected/tests
+END
+bootstrap.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/appid2b1qdred6z/!svn/ver/3/yii/demos/blog/protected/tests/bootstrap.php
+END
+phpunit.xml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/appid2b1qdred6z/!svn/ver/3/yii/demos/blog/protected/tests/phpunit.xml
+END
+readme.txt
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/appid2b1qdred6z/!svn/ver/3/yii/demos/blog/protected/tests/readme.txt
+END
+WebTestCase.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/appid2b1qdred6z/!svn/ver/3/yii/demos/blog/protected/tests/WebTestCase.php
+END

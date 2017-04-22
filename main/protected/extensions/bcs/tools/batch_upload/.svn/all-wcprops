@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/appid2b1qdred6z/!svn/ver/3/main/protected/extensions/bcs/tools/batch_upload
+END
+batch_upload_dir.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/appid2b1qdred6z/!svn/ver/3/main/protected/extensions/bcs/tools/batch_upload/batch_upload_dir.php
+END
+conf.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/appid2b1qdred6z/!svn/ver/3/main/protected/extensions/bcs/tools/batch_upload/conf.php
+END
+readme
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/appid2b1qdred6z/!svn/ver/3/main/protected/extensions/bcs/tools/batch_upload/readme
+END
+upload.sh
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/appid2b1qdred6z/!svn/ver/3/main/protected/extensions/bcs/tools/batch_upload/upload.sh
+END
+check.sh
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/appid2b1qdred6z/!svn/ver/3/main/protected/extensions/bcs/tools/batch_upload/check.sh
+END
+batch_upload_check.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/appid2b1qdred6z/!svn/ver/3/main/protected/extensions/bcs/tools/batch_upload/batch_upload_check.php
+END

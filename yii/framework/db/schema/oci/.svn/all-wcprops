@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/appid2b1qdred6z/!svn/ver/3/yii/framework/db/schema/oci
+END
+COciColumnSchema.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/appid2b1qdred6z/!svn/ver/3/yii/framework/db/schema/oci/COciColumnSchema.php
+END
+COciSchema.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/appid2b1qdred6z/!svn/ver/3/yii/framework/db/schema/oci/COciSchema.php
+END
+COciCommandBuilder.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/appid2b1qdred6z/!svn/ver/3/yii/framework/db/schema/oci/COciCommandBuilder.php
+END
+COciTableSchema.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/appid2b1qdred6z/!svn/ver/3/yii/framework/db/schema/oci/COciTableSchema.php
+END

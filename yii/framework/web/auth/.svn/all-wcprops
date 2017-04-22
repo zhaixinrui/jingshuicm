@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/appid2b1qdred6z/!svn/ver/3/yii/framework/web/auth
+END
+CAuthItem.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/appid2b1qdred6z/!svn/ver/3/yii/framework/web/auth/CAuthItem.php
+END
+CDbAuthManager.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/appid2b1qdred6z/!svn/ver/3/yii/framework/web/auth/CDbAuthManager.php
+END
+schema-mssql.sql
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/appid2b1qdred6z/!svn/ver/3/yii/framework/web/auth/schema-mssql.sql
+END
+CBaseUserIdentity.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/appid2b1qdred6z/!svn/ver/3/yii/framework/web/auth/CBaseUserIdentity.php
+END
+CPhpAuthManager.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/appid2b1qdred6z/!svn/ver/3/yii/framework/web/auth/CPhpAuthManager.php
+END
+schema-sqlite.sql
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/appid2b1qdred6z/!svn/ver/3/yii/framework/web/auth/schema-sqlite.sql
+END
+CAccessControlFilter.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/appid2b1qdred6z/!svn/ver/3/yii/framework/web/auth/CAccessControlFilter.php
+END
+CUserIdentity.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/appid2b1qdred6z/!svn/ver/3/yii/framework/web/auth/CUserIdentity.php
+END
+schema-mysql.sql
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/appid2b1qdred6z/!svn/ver/3/yii/framework/web/auth/schema-mysql.sql
+END
+schema-pgsql.sql
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/appid2b1qdred6z/!svn/ver/3/yii/framework/web/auth/schema-pgsql.sql
+END
+CAuthAssignment.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/appid2b1qdred6z/!svn/ver/3/yii/framework/web/auth/CAuthAssignment.php
+END
+CAuthManager.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/appid2b1qdred6z/!svn/ver/3/yii/framework/web/auth/CAuthManager.php
+END
+CWebUser.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/appid2b1qdred6z/!svn/ver/3/yii/framework/web/auth/CWebUser.php
+END
+schema-oci.sql
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/appid2b1qdred6z/!svn/ver/3/yii/framework/web/auth/schema-oci.sql
+END

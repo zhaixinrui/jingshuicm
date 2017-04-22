@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/appid2b1qdred6z/!svn/ver/3/main/protected/extensions/smarty
+END
+debug.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/appid2b1qdred6z/!svn/ver/3/main/protected/extensions/smarty/debug.tpl
+END
+Smarty.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/appid2b1qdred6z/!svn/ver/3/main/protected/extensions/smarty/Smarty.class.php
+END
+SmartyBC.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/appid2b1qdred6z/!svn/ver/3/main/protected/extensions/smarty/SmartyBC.class.php
+END

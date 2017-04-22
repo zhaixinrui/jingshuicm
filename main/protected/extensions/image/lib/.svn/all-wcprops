@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/appid2b1qdred6z/!svn/ver/45/main/protected/extensions/image/lib
+END
+ChannelException.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/appid2b1qdred6z/!svn/ver/3/main/protected/extensions/image/lib/ChannelException.class.php
+END
+BaeTaskQueueException.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/appid2b1qdred6z/!svn/ver/3/main/protected/extensions/image/lib/BaeTaskQueueException.class.php
+END
+BccsServerException.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/appid2b1qdred6z/!svn/ver/3/main/protected/extensions/image/lib/BccsServerException.class.php
+END
+CronException.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/appid2b1qdred6z/!svn/ver/3/main/protected/extensions/image/lib/CronException.class.php
+END
+RequestCore.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/appid2b1qdred6z/!svn/ver/45/main/protected/extensions/image/lib/RequestCore.class.php
+END
+BaeBase.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/appid2b1qdred6z/!svn/ver/3/main/protected/extensions/image/lib/BaeBase.class.php
+END
+BcmsException.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/appid2b1qdred6z/!svn/ver/3/main/protected/extensions/image/lib/BcmsException.class.php
+END
+BaeException.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/appid2b1qdred6z/!svn/ver/3/main/protected/extensions/image/lib/BaeException.class.php
+END

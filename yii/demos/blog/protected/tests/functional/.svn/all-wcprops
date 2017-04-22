@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/appid2b1qdred6z/!svn/ver/3/yii/demos/blog/protected/tests/functional
+END
+SiteTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/appid2b1qdred6z/!svn/ver/3/yii/demos/blog/protected/tests/functional/SiteTest.php
+END
+PostTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/appid2b1qdred6z/!svn/ver/3/yii/demos/blog/protected/tests/functional/PostTest.php
+END
+CommentTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/appid2b1qdred6z/!svn/ver/3/yii/demos/blog/protected/tests/functional/CommentTest.php
+END

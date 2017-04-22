@@ -1,0 +1,38 @@
+2014/05/10 11:48:05 [trace] [system.CModule] Loading "log" application component
+in /root/jingshuicm/main/index.php (13)
+2014/05/10 11:48:05 [trace] [system.CModule] Loading "request" application component
+in /root/jingshuicm/main/index.php (13)
+2014/05/10 11:48:05 [trace] [system.CModule] Loading "urlManager" application component
+in /root/jingshuicm/main/index.php (13)
+2014/05/10 11:48:05 [trace] [system.CModule] Loading "smarty" application component
+in /root/jingshuicm/main/protected/components/Controller.php (44)
+in /root/jingshuicm/main/index.php (13)
+2014/05/10 11:48:05 [trace] [system.CModule] Loading "user" application component
+in /root/jingshuicm/main/protected/controllers/SiteController.php (38)
+in /root/jingshuicm/main/index.php (13)
+2014/05/10 11:48:05 [trace] [system.CModule] Loading "session" application component
+in /root/jingshuicm/main/protected/controllers/SiteController.php (38)
+in /root/jingshuicm/main/index.php (13)
+2014/05/10 11:48:05 [trace] [system.CModule] Loading "db" application component
+in /root/jingshuicm/main/protected/controllers/SiteController.php (38)
+in /root/jingshuicm/main/index.php (13)
+2014/05/10 11:48:05 [trace] [system.db.CDbConnection] Opening DB connection
+in /root/jingshuicm/main/protected/controllers/SiteController.php (38)
+in /root/jingshuicm/main/index.php (13)
+2014/05/10 11:48:05 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `Session` WHERE expire<:expire
+in /root/jingshuicm/main/protected/controllers/SiteController.php (38)
+in /root/jingshuicm/main/index.php (13)
+2014/05/10 11:48:05 [trace] [system.db.CDbCommand] Querying SQL: SELECT `data`
+FROM `Session`
+WHERE expire>:expire AND id=:id
+in /root/jingshuicm/main/protected/controllers/SiteController.php (38)
+in /root/jingshuicm/main/index.php (13)
+2014/05/10 11:48:05 [trace] [system.CModule] Loading "log" application component
+in /root/jingshuicm/main/index.php (13)
+2014/05/10 11:48:05 [trace] [system.CModule] Loading "request" application component
+in /root/jingshuicm/main/index.php (13)
+2014/05/10 11:48:05 [trace] [system.CModule] Loading "urlManager" application component
+in /root/jingshuicm/main/index.php (13)
+2014/05/10 11:48:05 [trace] [system.CModule] Loading "smarty" application component
+in /root/jingshuicm/main/protected/components/Controller.php (44)
+in /root/jingshuicm/main/index.php (13)
